@@ -1,34 +1,63 @@
-$color-font: #33d ;
-$color-bg-default: #a9f;
-$color-bg-boxes: #ddf;
-$font-default: Arial, Helvetica, sans-serif;
+$color-primary: #483D8B;
+$color-secondary: #f58220;
+$font-color-primary: #ffffff;
+$font-color-secondary: #454545;
+$font-default:'Montserrat Alternates', sans-serif;
 $font-size-default: 1.6rem;
+$font-size-nav: 1.8rem;
+
+@import 'fonts';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+@import 'nav';
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: $color-bg-default;
+    background-color: $color-primary;
     font-family: $font-default;
+    margin: 0;
 }
 
 h1 {
-    color: $color-font;
+    color: $font-color-primary;
     text-align: center;
     margin-top: 4rem;
 }
 
-h2 {
-    margin-top: 4rem;
+article {
+
+    h1 {
+        color: $color-secondary;
+        font-size: 3rem;
+        text-align: left;
+    }
+
 }
 
+h2 {
+    color: $font-color-primary;
+    font-family: 'freshman', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 4rem;
+    text-shadow: 1px 2px 8px #FFFFFF;
+}
+
+#root,
 header,
 section,
 footer {
     display: block;
     float: left;
     width: 100%;
+}
+
+section {
+    padding: 4rem 0;
+    margin: 0;
 }
 
 .container {
@@ -38,12 +67,10 @@ footer {
     max-width: 90vw;
 }
 
-#sobre {
-    background-color: $color-bg-boxes;
-}
-
-#produtos {
-
-}
-
-@import 'vitrine'
+@import 'animations';
+@import 'header';
+@import 'sobre';
+@import 'produtos';
+@import 'vitrine';
+@import 'steps';
+@import 'footer';
